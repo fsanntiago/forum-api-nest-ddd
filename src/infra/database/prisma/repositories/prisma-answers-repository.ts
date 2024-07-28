@@ -1,0 +1,30 @@
+import { AnswersRepository } from '@/domain/forum/application/repositories/answers-repository'
+import { Answer } from '@/domain/forum/enterprise/entities/answer'
+import { PaginationParams } from '@/shared/repositories/pagination-params'
+import { Injectable } from '@nestjs/common'
+
+@Injectable()
+export class PrismaAnswersRepository implements AnswersRepository {
+  findManyByQuestionId(
+    questionId: string,
+    params: PaginationParams,
+  ): Promise<Answer[]> {
+    throw new Error('Method not implemented.')
+  }
+
+  save(answer: Answer): Promise<void> {
+    throw new Error('Method not implemented.')
+  }
+
+  findById(id: string): Promise<Answer | null> {
+    throw new Error('Method not implemented.')
+  }
+
+  create(answer: Answer): Promise<void> {
+    throw new Error('Method not implemented.')
+  }
+
+  delete(answer: Answer): Promise<void> {
+    throw new Error('Method not implemented.')
+  }
+}
